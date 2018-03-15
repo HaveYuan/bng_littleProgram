@@ -1,0 +1,40 @@
+<!--pages/prolist/prolist.wxml-->
+
+<view class="container">
+  <!-- 返回栏  -->
+  <view class="return-box" bindtap='toPros'>
+    <view>
+      <image src="../../images/return.png" class="return"></image>
+      <text>返回系列</text>
+    </view>
+  </view>
+
+  <!-- 内容  -->
+  <view class="pro-wrap">
+    <view bindtap='toProInfo' data-item-index="1">
+      <image src="../../images/pro-img.jpg" class="pro-img"></image>
+      <text class="pro-text">连接件</text>
+    </view>
+    <view bindtap='toProInfo' data-item-index="2">
+      <image src="../../images/pro-img.jpg" class="pro-img"></image>
+      <text class="pro-text">连接件</text>
+    </view>
+    <view bindtap='toProInfo' data-item-index="3">
+      <image src="../../images/pro-img.jpg" class="pro-img"></image>
+      <text class="pro-text">连接件</text>
+    </view>
+  </view>
+
+  <!-- 底部  -->
+  <view class="nav-bar">
+    <view bindtap='toCar'>
+      <image class="nav-icon nav-icon1" src="../../images/car.png"></image>
+      <view>购物车</view>
+    </view>
+    <view bindtap='toOrder'>
+      <image class="nav-icon nav-icon2" src="../../images/count.png"></image>
+      <view>我的订单</view>
+    </view>
+  </view>
+</view>
+

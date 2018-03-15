@@ -1,0 +1,36 @@
+<!--pages/myorder/myorder.wxml-->
+<view class="container">
+  <!-- 返回栏  -->
+  <view class="return-box" bindtap='returnIndex'>
+    <view>
+      <image src="../../images/return.png" class="return"></image>
+      <text>返回首页</text>
+    </view>
+  </view>
+
+  <!-- 主体 -->
+  <view class="order-ist">
+    <view bindtap='checkOrder' class="order-item" wx:for="{{orderList}}" data-index="{{item.id}}">
+      <view class="order-top">
+        <view class="ot-l">
+          <text class="order-num">订单号：{{item.orderNum}}</text>
+        </view>
+        <view class="ot-r">
+          <image class="search" src="../../images/search.png"></image>
+          <text >订单状态：</text>
+          <text wx:if="{{item.orderFlag == 2}}" class="no-finish">待审核</text>
+          <text wx:if="{{item.orderFlag == 1}}" class="no-finish">已出库</text>
+          <text wx:if="{{item.orderFlag == 0}}">已完成</text>
+        </view>
+      </view>
+      <view>
+        <text class="time">{{item.orderTime}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部  -->
+  <view class="nav-bar">
+    <view bindtap='logout'>退出登录</view>
+  </view>
+</view>

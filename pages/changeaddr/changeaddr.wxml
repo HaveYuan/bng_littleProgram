@@ -1,0 +1,44 @@
+<!--pages/changeaddr/changeaddr.wxml-->
+<view class="container">
+  <view class="addr-list">
+    <block>
+      <view class="none-addr" wx:if="{{addrList == null}}">
+        <text>---您还没有添加收货地址---</text>
+      </view>
+    </block>
+
+    <view class="addr-item" wx:if="{{addrList != null}}" wx:for="{{addrList}}">
+        <view bindtap='changeAddr' data-index="{{item.id}}">
+        <view>
+          <text class="name">{{item.person}}</text>
+          <text>{{item.phone}}</text>
+        </view>
+        <view>
+          <text>{{item.addr[0]}}{{item.addr[1]}}{{item.addr[2]}}{{item.clearAddr}}</text>
+        </view>
+      </view>
+      
+      <image bindtap='deleteAddr' src="../../images/close2.png" class="close2" data-index="{{item.id}}"></image>
+    </view>
+    <!-- <view class="addr-item">
+      <view bindtap='changeAddr' data-index="1">
+        <view>
+          <text class="name">林友原</text>
+          <text>12345678945</text>
+        </view>
+        <view>
+          <text>广东省广州市</text>
+        </view>
+      </view>
+      
+      <image bindtap='deleteAddr' src="../../images/close2.png" class="close2" data-index="1"></image>
+    </view> -->
+    
+  </view>
+  <!--  底部  -->
+  <view class="nav-bar">
+      <view class="new-addr">
+        <text bindtap="addNewAddr">新增收货地址</text>
+      </view>
+  </view>
+</view>

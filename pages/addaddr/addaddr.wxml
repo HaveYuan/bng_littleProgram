@@ -1,0 +1,40 @@
+<!--pages/addaddr/addaddr.wxml-->
+<view clas="container">
+  <view class="addr-box">
+    <view>
+      <text>收货人</text>
+      <input type="text" value="{{person}}" bindblur='getPerson'></input>
+    </view>
+    <view>
+      <text>联系电话</text>
+      <input type="number" value="{{phone}}" bindblur='getPhone'></input>
+    </view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+      <view class="picker">
+        <text>省</text>
+        <input disabled='true' value="{{region[0]}}"></input>
+      </view>
+      <view class="picker">
+        <text>市</text>
+        <input disabled='true' value="{{region[1]}}"></input>
+      </view>
+      <view class="picker">
+        <text>区/县</text>
+        <input disabled='true' value="{{region[2]}}"></input>
+      </view>
+    </picker>
+    <view>
+      <text>详细地址</text>
+      <textarea auto-height='true' value="{{clearAddr}}" bindinput='getClearAddr'></textarea>
+    </view>
+  </view>
+
+  <button class="sub-addr" bindtap='subAddr' disabled='{{istrue}}'>确认</button>
+
+    <view class="add-success" animation="{{hideModale}}" style="display:{{isShow}};">
+    <view>
+      <image src="../../images/ok.png"></image>
+      <text>保存成功</text>
+    </view>
+  </view>
+</view>

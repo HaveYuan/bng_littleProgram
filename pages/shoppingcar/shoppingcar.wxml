@@ -1,0 +1,126 @@
+<!--pages/shoppingcar/shoppingcar.wxml-->
+<view class="container">
+  <!-- 返回栏  -->
+  <view class="return-box" bindtap='returnIndex'>
+    <view>
+      <image src="../../images/return.png" class="return"></image>
+      <text>继续购物</text>
+    </view>
+  </view>
+
+  
+
+  <!-- 主体  -->
+  <block wx:if="{{carArry == ''}}">
+    <view class="car">
+      <view class="none-shop">
+        <text>---购物车是空的---</text>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{carArry != ''}}">
+  <view class="car">
+    <!-- <view class="none-shop">
+      <text>---购物车是空的---</text>
+    </view> -->
+    <view class="select-addr" bindtap='selectAddr'>
+      <view wx:if="{{phone != ''}}" class="addr-content" >
+        <view>
+          <text>{{person}}</text>
+          <text>{{phone}}</text>
+        </view>
+        <text>{{resgion[0]}}{{resgion[1]}}{{resgion[2]}}{{clearAddr}}</text>
+      </view>
+
+      <view wx:if="{{phone == ''}}" class="addr-content">
+        <text>请选择地址</text>
+      </view>
+      <image class="into" src="../../images/into.png"></image>
+    </view>
+    <image class="line" src="../../images/line.png"></image>
+
+    <view class="car-item"  wx:for="{{carArry}}" wx:for-index="parentIndex">
+      <view class="item-top">
+        <view bindtap='ifCheckAll' data-parentIndex="{{parentIndex}}">
+          <image wx:if="{{item.ifCheckAllBtn == 0}}" class="select-style" src="../../images/select-no.png"></image>
+          <image wx:else="{{item.ifCheckAllBtn == 1}}" class="select-style" src="../../images/select.png"></image> 
+          <label class="item-name" id="order{{parentIndex}}">{{item.name}}</label>
+        </view>
+      </view>
+
+      <view class="order-item" wx:for="{{item.size}}" wx:for-item="sizes" data-sizes="{{sizes}}">
+        <view bindtap='ifCheck' data-item-index="{{index}}" data-parentIndex="{{parentIndex}}">
+          <image wx:if="{{sizes.ifCheckBtn == 0}}" class="select-style-m" src="../../images/select-no.png"></image>
+          <image wx:else="{{sizes.ifCheckBtn == 1}}" class="select-style-m" src="../../images/select.png"></image> 
+        </view>
+        <image class="pro-img" src="{{item.picPath}}"></image>
+        <view class="pro-info">
+          <text class="pro-par">{{sizes.theSize}}</text>
+          <view>
+            <text class="new-price">￥{{sizes.price}}/箱</text>
+            <text class="old-price">￥{{sizes.oldPrice}}/箱</text>
+          </view>
+        </view>
+        <view class="input-wrap">
+          <text class="minus" bindtap='minus' data-item-index="{{index}}" data-parentIndex="{{parentIndex}}">-</text>
+          <input type='number' class="input-num" value="{{sizes.count}}" bindinput="changeNum" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}"></input>
+          <text class="add" bindtap='add' id="add{{index}}" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}">+</text>
+        </view>
+      </view>
+      
+      <!-- <view class="order-item">
+        <checkbox-group>
+          <image class="select-style-m" src="../../images/select-no.png"></image>
+          <checkbox hidden='true' />
+        </checkbox-group>
+        <image class="pro-img" src="../../images/pro-img.jpg"></image>
+        <view class="pro-info">
+          <text class="pro-par">规格：19,19.22,20</text>
+          <view>
+            <text class="new-price">￥160/箱</text>
+            <text class="old-price">￥200/箱</text>
+          </view>
+        </view>
+        <view class="input-wrap">
+          <text class="minus" bindtap='minus'>-</text>
+          <input type='number' class="input-num" value="{{nums}}" bindinput="changeInput"></input>
+          <text class="add" bindtap='add'>+</text>
+        </view>
+      </view> -->
+    </view>
+
+    <view class="o-bottom">
+      <view>
+        <text>订单金额</text>
+        <text class="price-color">￥{{totalOldMoney}}</text>
+      </view>
+      <view>
+        <text>会员优惠</text>
+        <text class="price-color">-￥{{discount}}</text>
+      </view>
+      <view>
+        <text>实付金额</text>
+        <text class="price-color">￥{{shouldPay}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部  -->
+  <view class="nav-bar">
+    <view>
+        <view class="sel-all" bindtap='selectAll'>
+          <image wx:if="{{selectAllFlag == 0}}" class="select-style" src="../../images/select-no.png"></image>
+          <image wx:else="{{selectAllFlag == 1}}" class="select-style" src="../../images/select.png"></image>
+          <label>全选</label>
+        </view>
+      <view class="all-money">
+        <text class="should-pay">总计：</text>
+        <text class="price-color">￥{{shouldPay}}</text>
+      </view>
+      
+    </view>
+    <text bindtap='subOrder' class="sub-order {{shouldPay <= 0 ? 'sub-default':''}}">提交订单</text>
+
+  </view>
+  </block>
+</view>

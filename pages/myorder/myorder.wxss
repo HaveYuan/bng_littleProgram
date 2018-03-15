@@ -1,0 +1,38 @@
+/* pages/myorder/myorder.wxss */
+.order-ist{
+  margin-left: 28rpx;
+  margin-top: 68rpx;
+  padding-bottom: 98rpx;
+  border-top: 1px solid #eee;
+}
+.order-item{
+  padding: 28rpx 23rpx 28rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.order-top,.ot-l{
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.ot-r{
+  font-size: 28rpx;
+  color: #fbc200;
+  display: flex;
+  align-items: center;
+}
+.search{
+  width: 26rpx;
+  height: 26rpx;
+  margin: 0 10rpx;
+}
+.order-num{
+  font-size: 28rpx;
+  color: #424242;
+}
+.time{
+  font-size: 28rpx;
+  color: #b3b3b3;
+}
+.ot-r .no-finish{
+  color: #f76260;
+}

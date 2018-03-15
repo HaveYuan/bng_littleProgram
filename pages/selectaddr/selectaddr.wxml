@@ -1,0 +1,28 @@
+<!--pages/changeaddr/changeaddr.wxml-->
+<view class="container">
+  <view class="addr-list">
+    <block>
+      <view class="none-addr" wx:if="{{addrList == null}}">
+        <text>---您还没有添加收货地址---</text>
+      </view>
+    </block>
+
+    <view class="addr-item" wx:if="{{addrList != null}}" wx:for="{{addrList}}" data-index="{{index}}" bindtap='chooseAddr'>
+        <view data-index="{{item.id}}">
+        <view>
+          <text class="name">{{item.person}}</text>
+          <text>{{item.phone}}</text>
+        </view>
+        <view>
+          <text>{{item.addr[0]}}{{item.addr[1]}}{{item.addr[2]}}{{item.clearAddr}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--  底部  -->
+  <view class="nav-bar">
+      <view class="new-addr">
+        <text bindtap="addNewAddr">新增收货地址</text>
+      </view>
+  </view>
+</view>

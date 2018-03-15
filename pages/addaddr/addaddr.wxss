@@ -1,0 +1,37 @@
+/* pages/addaddr/addaddr.wxss */
+.addr-box{
+  padding-left: 28rpx;
+  margin-top: 26rpx;
+}
+.addr-box>view,.picker{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-size: 28rpx;
+  color: #6b6b6b;
+  padding: 10rpx 0;
+}
+.addr-box>view text,.picker text{
+  width: 114rpx;
+}
+.addr-box>view input,.picker input{
+  flex: 1;
+  margin-left: 18rpx;
+  font-size: 28rpx;
+  color: #424242;
+}
+.addr-box>view textarea{
+  padding: 0 8rpx;
+  flex: 1;
+  margin-left: 10rpx;
+}
+.sub-addr{
+  width: 694rpx;
+  height: 80rpx;
+  color: #fff;
+  background: linear-gradient(to right, #faae00, #fddc38);
+  font-size: 32rpx;
+  margin: 36rpx auto 0;
+  border-radius: 18rpx;
+  border: none;
+}

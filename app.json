@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/prolist/prolist",
+    "pages/proinfo/proinfo",
+    "pages/addaddr/addaddr",
+    "pages/changeaddr/changeaddr",
+    "pages/selectaddr/selectaddr",
+    "pages/myorder/myorder",
+    "pages/shoppingcar/shoppingcar",
+    "pages/orderinfo/orderinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百年管",
+    "navigationBarTextStyle": "black"
+  }
+}

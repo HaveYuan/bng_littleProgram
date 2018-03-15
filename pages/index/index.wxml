@@ -1,0 +1,101 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="pro-box">
+    <view class="pro-items">
+      <view class="line-yellow" bindtap="toProList" data-index="1">
+        <image class="icon icon1" src="../../images/icon1.png"></image>
+        <view class="pro-r">
+          <text class="cn">连接件系列</text>
+          <text class="en">Connector series</text> 
+        </view>
+      </view>
+      <view class="line-purple" bindtap="toProList" data-index="2">
+        <image class="icon icon2" src="../../images/icon2.png"></image>
+        <view class="pro-r">
+          <text class="cn">弯管系列</text>
+          <text class="en">Bend series</text> 
+        </view>
+      </view>
+    </view>
+    <view class="pro-items">
+      <view class="line-blue" bindtap="toProList" data-index="3">
+        <image class="icon icon3" src="../../images/icon3.png"></image>
+        <view class="pro-r">
+          <text class="cn">三通系列</text>
+          <text class="en">T series</text> 
+        </view>
+      </view>
+      <view class="line-red" bindtap="toProList" data-index="4">
+        <image class="icon icon4" src="../../images/icon4.png"></image>
+        <view class="pro-r">
+          <text class="cn">配件直通</text>
+          <text class="en">Connector series</text> 
+        </view>
+      </view>
+    </view>
+    <view class="pro-items">
+      <view class="line-purple" bindtap="toProList" data-index="5">
+        <image class="icon icon5" src="../../images/icon5.png"></image>
+        <view class="pro-r">
+          <text class="cn">波纹管系列</text>
+          <text class="en">Bellows series</text> 
+        </view>
+      </view>
+      <view class="line-green" bindtap="toProList" data-index="6">
+        <image class="icon icon6" src="../../images/icon6.png"></image>
+        <view class="pro-r">
+          <text class="cn">伸缩管系列</text>
+          <text class="en">Telescopic series</text> 
+        </view>
+      </view>
+    </view>
+    <view class="pro-items">
+      <view class="line-red" bindtap="toProList" data-index="7">
+        <image class="icon icon7" src="../../images/icon7.png"></image>
+        <view class="pro-r">
+          <text class="cn">直管系列</text>
+          <text class="en">Straight series</text> 
+        </view>
+      </view>
+      <view class="line-blue" bindtap="toProList" data-index="8">
+        <image class="icon icon8" src="../../images/icon8.png"></image>
+        <view class="pro-r">
+          <text class="cn">阀门系列</text>
+          <text class="en">Value series</text> 
+        </view>
+      </view>
+    </view>
+    <view class="pro-items">
+      <view class="line-green" bindtap="toProList" data-index="9">
+        <image class="icon icon9" src="../../images/icon9.png"></image>
+        <view class="pro-r">
+          <text class="cn">管夹及其它</text>
+          <text class="en">Other series</text> 
+        </view>
+      </view>
+      <view class="line-yellow" bindtap="toProList" data-index="10">
+        <image class="icon icon10" src="../../images/icon10.png"></image>
+        <view class="pro-r">
+          <text class="cn">密封圈系列</text>
+          <text class="en">Seal ring series</text> 
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="nav-bar">
+    <view bindtap='shoppingCar'>
+      <image class="nav-icon nav-icon1" src="../../images/car.png"></image>
+      <view>购物车</view>
+    </view>
+    <view bindtap='myOrder'>
+      <image class="nav-icon nav-icon2" src="../../images/count.png"></image>
+      <view>我的订单</view>
+    </view>
+    <view bindtap='changeAddr'>
+      <image class="nav-icon nav-icon1" src="../../images/addr.png"></image>
+      <view>收货地址</view>
+    </view>
+  </view> 
+</view>
+

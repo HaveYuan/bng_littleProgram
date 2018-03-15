@@ -1,0 +1,171 @@
+/* pages/proinfo/proinfo.wxss */
+.line{
+  display: inline-block;
+  font-size: 18rpx;
+  margin: 0 10rpx;
+}
+.proinfo{
+  margin-top: 12rpx;
+  padding: 58rpx 28rpx 98rpx;
+}
+.info-box{
+  width: 100%;
+  height: 452rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-box image{
+  width: 424rpx;
+  height: 294rpx;
+}
+.search{
+  width: 26rpx;
+  height: 26rpx;
+  margin: 0 14rpx;
+}
+.price-top{
+  display: flex;
+  margin-top: 14rpx;
+  margin-bottom: 6rpx;
+}
+.price-now{
+  font-size: 32rpx;
+  color: #f76260;
+  flex: 1;
+}
+.pro-style{
+  font-size: 28rpx;
+  color: #fabd00;
+}
+.s-r{
+  display: flex;
+  align-items: center;
+}
+.price-origin{
+  text-decoration: line-through;
+  font-size: 28rpx;
+  color: #424242;
+  margin-bottom: 28rpx;
+}
+.styles,.unit,.nums{
+  display: flex;
+  margin-bottom: 10rpx;
+  min-height: 60rpx;
+}
+.all-styles{
+  font-size: 28rpx;
+  color: #fff;
+  padding: 10rpx 20rpx;
+  background: #dcd8d8;
+  border-radius: 12rpx;
+  margin-right: 20rpx;
+  margin-bottom: 14rpx;
+}
+.s-l{
+  width: 72rpx;
+  min-width: 72rpx;
+}
+.style-fonts{
+  font-size: 28rpx;
+  color: #b3b3b3;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.radio-style{
+  display: flex;
+  flex-wrap: wrap;
+}
+.active{
+  background: #f76260;
+}
+.input-wrap{
+  width: 156rpx;
+  height: 48rpx;
+  background: #fff;
+  border: 1px solid #dcd8d8;
+  border-radius: 10rpx;
+  display: flex;
+}
+.minus,.add{
+  width: 42rpx;
+  height: 100%;
+  font-size: 32rpx;
+  color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.minus{
+  border-right: 1px solid #dcd8d8;
+}
+.add{
+  border-left: 1px solid #dcd8d8;
+}
+.input-num{
+  flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+  color: #424242;
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(107,107,107,0.5);
+  z-index: 3;
+  overflow: hidden;
+}
+.cover-box{
+  width: 600rpx;
+  height: 600rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -300rpx;
+  margin-left: -300rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.cover-box image.pic{
+  width: 600rpx;
+  height: 600rpx;
+}
+.cover-box image.close{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 34rpx;
+  top: 20rpx;
+}
+.noScroll{
+
+  height: 600rpx;
+}
+.noScroll{
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+}
+.add-car-btn{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #fabd00;
+  border: none;
+  font-size: 32rpx;
+}
+.add-car-btn::after{
+  border: none;
+}
+
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  background-color: #fff;
+  color: #fabd00;
+} 

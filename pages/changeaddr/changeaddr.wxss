@@ -1,0 +1,38 @@
+/* pages/changeaddr/changeaddr.wxss */
+.new-addr text{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.addr-list{
+  padding-bottom: 98rpx;
+  padding-top: 28rpx;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+}
+.none-addr{
+  font-size: 32rpx;
+  color: #dcd8d8;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.addr-item{
+  padding: 18rpx 112rpx 18rpx 18rpx;
+  background: rgba(253,227,0,0.2);
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  color:#424242;
+  line-height: 38rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.addr-item .name{
+  margin-right: 20rpx;
+}
+.close2{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 22rpx;
+  top: 36rpx;
+}
